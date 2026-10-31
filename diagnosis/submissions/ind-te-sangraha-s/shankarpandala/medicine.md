@@ -20,11 +20,12 @@ Counts are from my 500 labelled rows. Where a harm-test block says Telugu interi
        return re.sub(r"([\u0C00-\u0C02\u0C04-\u0C7F]*)ః(?=\n|$| [\"“‘'])", fix, text)
    ```
 3. **Action:** fix the text. (My verdicts on these documents: drop 2, fix 16.)
-4. **Harm test:** gold set `gold_tel_Telu.jsonl` (sha256 b75f2c2a8acc), medicine `telugu_rules.py:medicine_a6` (sha256 6beb7304dd6b); rule: changed or dropped at most 1% (DISEASES.md section 4).
-   - tel_Telu: Changed: 0 of 46 (0.00%). Dropped: 0 of 46 (0.00%). Changed or dropped: 0 of 46 (0.00%). **PASS**
+4. **Harm test:** gold set: the Telugu interim gold set, 50 documents (teams/02-data-b/gold/telugu_gold.csv, built 31 Oct 2026); rule `medicine_a6` of this file (the code block in this section), run with harm_test_indic.py (PR #148); a rule passes if it changes or drops at most max(1 document, 1%) of the gold set (TSAI, CAP 30 Oct).
+   - tel_Telu: Changed: 0 of 50 (0.00%). Dropped: 0 of 50 (0.00%). Changed or dropped: 0 of 50 (0.00%). **PASS**
    - ZWJ/ZWNJ audit: 0 changed documents checked, 0 with a different count. **PASS**
+   - Normal-form audit (NFC kept, no compatibility character lost): 0 changed documents, 0 problems. **PASS**
    - Result: **PASS**
-   - Gold set: 46 Telugu documents (5 from ind-te-sangraha-s, 18 from ind-te-fw2, 23 from ind-te-sangraha-v), each marked clean by two readers who read it in full. Built with gold_from_labels.py and checked against Data A's build_gold.py (the same 46 ids).
+   - Gold set: 50 Telugu documents (5 from ind-te-sangraha-s, 18 from ind-te-fw2, 27 from ind-te-sangraha-v), each marked clean by two readers who read it in full. Built with gold_indic.py (PR #148) from the public sheets of 31 Oct. The earlier 46-document set gave the same result.
    - It is not a rule that does nothing: it changes 4 of the 18 documents labelled A6 and 101 documents in the whole pack.
 5. **Side effects:** A visarga used as a colon inside a line (a dateline such as a place name before a colon, or a score) is left alone, so about 57% of the places stay unfixed. A Sanskrit word that ends in a visarga and is not in the list gets a colon when it ends a line. The rule does not touch the look-alike Latin, Greek or Cyrillic letters (about 6 documents); those need a hand fix.
 
@@ -43,11 +44,12 @@ Counts are from my 500 labelled rows. Where a harm-test block says Telugu interi
        return text
    ```
 3. **Action:** fix the text. (My verdicts on these documents: drop 1, fix 8.)
-4. **Harm test:** gold set `gold_tel_Telu.jsonl` (sha256 b75f2c2a8acc), medicine `telugu_rules.py:medicine_b2` (sha256 6beb7304dd6b); rule: changed or dropped at most 1% (DISEASES.md section 4).
-   - tel_Telu: Changed: 0 of 46 (0.00%). Dropped: 0 of 46 (0.00%). Changed or dropped: 0 of 46 (0.00%). **PASS**
+4. **Harm test:** gold set: the Telugu interim gold set, 50 documents (teams/02-data-b/gold/telugu_gold.csv, built 31 Oct 2026); rule `medicine_b2` of this file (the code block in this section), run with harm_test_indic.py (PR #148); a rule passes if it changes or drops at most max(1 document, 1%) of the gold set (TSAI, CAP 30 Oct).
+   - tel_Telu: Changed: 0 of 50 (0.00%). Dropped: 0 of 50 (0.00%). Changed or dropped: 0 of 50 (0.00%). **PASS**
    - ZWJ/ZWNJ audit: 0 changed documents checked, 0 with a different count. **PASS**
+   - Normal-form audit (NFC kept, no compatibility character lost): 0 changed documents, 0 problems. **PASS**
    - Result: **PASS**
-   - Gold set: 46 Telugu documents (5 from ind-te-sangraha-s, 18 from ind-te-fw2, 23 from ind-te-sangraha-v), each marked clean by two readers who read it in full. Built with gold_from_labels.py and checked against Data A's build_gold.py (the same 46 ids).
+   - Gold set: 50 Telugu documents (5 from ind-te-sangraha-s, 18 from ind-te-fw2, 27 from ind-te-sangraha-v), each marked clean by two readers who read it in full. Built with gold_indic.py (PR #148) from the public sheets of 31 Oct. The earlier 46-document set gave the same result.
    - It is not a rule that does nothing: it changes 8 of the 9 documents labelled B2 and 8 documents in the whole pack.
 5. **Side effects:** A real `<word>` in angle brackets would be removed. None was found in the clean rows. A Latin tag such as `<br>` is not touched.
 
@@ -68,11 +70,12 @@ Counts are from my 500 labelled rows. Where a harm-test block says Telugu interi
        return text
    ```
 3. **Action:** fix the text. (My verdicts on these documents: drop 4, fix 3.)
-4. **Harm test:** gold set `gold_tel_Telu.jsonl` (sha256 b75f2c2a8acc), medicine `telugu_rules.py:medicine_b4` (sha256 6beb7304dd6b); rule: changed or dropped at most 1% (DISEASES.md section 4).
-   - tel_Telu: Changed: 0 of 46 (0.00%). Dropped: 0 of 46 (0.00%). Changed or dropped: 0 of 46 (0.00%). **PASS**
+4. **Harm test:** gold set: the Telugu interim gold set, 50 documents (teams/02-data-b/gold/telugu_gold.csv, built 31 Oct 2026); rule `medicine_b4` of this file (the code block in this section), run with harm_test_indic.py (PR #148); a rule passes if it changes or drops at most max(1 document, 1%) of the gold set (TSAI, CAP 30 Oct).
+   - tel_Telu: Changed: 0 of 50 (0.00%). Dropped: 0 of 50 (0.00%). Changed or dropped: 0 of 50 (0.00%). **PASS**
    - ZWJ/ZWNJ audit: 0 changed documents checked, 0 with a different count. **PASS**
+   - Normal-form audit (NFC kept, no compatibility character lost): 0 changed documents, 0 problems. **PASS**
    - Result: **PASS**
-   - Gold set: 46 Telugu documents (5 from ind-te-sangraha-s, 18 from ind-te-fw2, 23 from ind-te-sangraha-v), each marked clean by two readers who read it in full. Built with gold_from_labels.py and checked against Data A's build_gold.py (the same 46 ids).
+   - Gold set: 50 Telugu documents (5 from ind-te-sangraha-s, 18 from ind-te-fw2, 27 from ind-te-sangraha-v), each marked clean by two readers who read it in full. Built with gold_indic.py (PR #148) from the public sheets of 31 Oct. The earlier 46-document set gave the same result.
    - It is not a rule that does nothing: it changes 7 of the 7 documents labelled B4 and 10 documents in the whole pack.
 5. **Side effects:** The Telugu word ఐడి (ID) followed directly by a digit is removed; the same word with a space before the digit is kept. The text around the placeholder may still read badly.
 
@@ -93,11 +96,12 @@ Counts are from my 500 labelled rows. Where a harm-test block says Telugu interi
        return text
    ```
 3. **Action:** fix the text (remove the dangling last line). (My verdicts on these documents: drop 5, fix 27.)
-4. **Harm test:** gold set `gold_tel_Telu.jsonl` (sha256 b75f2c2a8acc), medicine `telugu_rules.py:medicine_c3` (sha256 6beb7304dd6b); rule: changed or dropped at most 1% (DISEASES.md section 4).
-   - tel_Telu: Changed: 0 of 46 (0.00%). Dropped: 0 of 46 (0.00%). Changed or dropped: 0 of 46 (0.00%). **PASS**
+4. **Harm test:** gold set: the Telugu interim gold set, 50 documents (teams/02-data-b/gold/telugu_gold.csv, built 31 Oct 2026); rule `medicine_c3` of this file (the code block in this section), run with harm_test_indic.py (PR #148); a rule passes if it changes or drops at most max(1 document, 1%) of the gold set (TSAI, CAP 30 Oct).
+   - tel_Telu: Changed: 0 of 50 (0.00%). Dropped: 0 of 50 (0.00%). Changed or dropped: 0 of 50 (0.00%). **PASS**
    - ZWJ/ZWNJ audit: 0 changed documents checked, 0 with a different count. **PASS**
+   - Normal-form audit (NFC kept, no compatibility character lost): 0 changed documents, 0 problems. **PASS**
    - Result: **PASS**
-   - Gold set: 46 Telugu documents (5 from ind-te-sangraha-s, 18 from ind-te-fw2, 23 from ind-te-sangraha-v), each marked clean by two readers who read it in full. Built with gold_from_labels.py and checked against Data A's build_gold.py (the same 46 ids).
+   - Gold set: 50 Telugu documents (5 from ind-te-sangraha-s, 18 from ind-te-fw2, 27 from ind-te-sangraha-v), each marked clean by two readers who read it in full. Built with gold_indic.py (PR #148) from the public sheets of 31 Oct. The earlier 46-document set gave the same result.
    - It is not a rule that does nothing: it changes 29 of the 32 documents labelled C3 and 29 documents in the whole pack.
 5. **Side effects:** A real last line that ends with a colon is removed. A document cut mid-sentence stays as it is; for those the alternative action is to drop the document.
 
@@ -122,11 +126,12 @@ Counts are from my 500 labelled rows. Where a harm-test block says Telugu interi
        return False
    ```
 3. **Action:** drop the document (only the looping documents; the rest of the D4 documents need a translation-quality score, Gate 2). (My verdicts on these documents: drop 112, fix 245.)
-4. **Harm test:** gold set `gold_tel_Telu.jsonl` (sha256 b75f2c2a8acc), medicine `telugu_rules.py:medicine_d4` (sha256 6beb7304dd6b); rule: changed or dropped at most 1% (DISEASES.md section 4).
-   - tel_Telu: Changed: 0 of 46 (0.00%). Dropped: 0 of 46 (0.00%). Changed or dropped: 0 of 46 (0.00%). **PASS**
+4. **Harm test:** gold set: the Telugu interim gold set, 50 documents (teams/02-data-b/gold/telugu_gold.csv, built 31 Oct 2026); rule `medicine_d4` of this file (the code block in this section), run with harm_test_indic.py (PR #148); a rule passes if it changes or drops at most max(1 document, 1%) of the gold set (TSAI, CAP 30 Oct).
+   - tel_Telu: Changed: 0 of 50 (0.00%). Dropped: 0 of 50 (0.00%). Changed or dropped: 0 of 50 (0.00%). **PASS**
    - ZWJ/ZWNJ audit: 0 changed documents checked, 0 with a different count. **PASS**
+   - Normal-form audit (NFC kept, no compatibility character lost): 0 changed documents, 0 problems. **PASS**
    - Result: **PASS**
-   - Gold set: 46 Telugu documents (5 from ind-te-sangraha-s, 18 from ind-te-fw2, 23 from ind-te-sangraha-v), each marked clean by two readers who read it in full. Built with gold_from_labels.py and checked against Data A's build_gold.py (the same 46 ids).
+   - Gold set: 50 Telugu documents (5 from ind-te-sangraha-s, 18 from ind-te-fw2, 27 from ind-te-sangraha-v), each marked clean by two readers who read it in full. Built with gold_indic.py (PR #148) from the public sheets of 31 Oct. The earlier 46-document set gave the same result.
    - It is not a rule that does nothing: it drops 4 of the 357 documents labelled D4 and 4 documents in the whole pack.
 5. **Side effects:** It acts on 4 of the 357 documents with D4, so almost all D4 documents stay. A list or a table with a repeated word could be dropped by mistake.
 
@@ -144,11 +149,12 @@ Counts are from my 500 labelled rows. Where a harm-test block says Telugu interi
        return n >= 6 and 100 * n / words >= 2
    ```
 3. **Action:** drop the document (only the clearest cases; the others need a translation-quality score, Gate 2). (My verdicts on these documents: drop 26, fix 61.)
-4. **Harm test:** gold set `gold_tel_Telu.jsonl` (sha256 b75f2c2a8acc), medicine `telugu_rules.py:medicine_d5` (sha256 6beb7304dd6b); rule: changed or dropped at most 1% (DISEASES.md section 4).
-   - tel_Telu: Changed: 0 of 46 (0.00%). Dropped: 0 of 46 (0.00%). Changed or dropped: 0 of 46 (0.00%). **PASS**
+4. **Harm test:** gold set: the Telugu interim gold set, 50 documents (teams/02-data-b/gold/telugu_gold.csv, built 31 Oct 2026); rule `medicine_d5` of this file (the code block in this section), run with harm_test_indic.py (PR #148); a rule passes if it changes or drops at most max(1 document, 1%) of the gold set (TSAI, CAP 30 Oct).
+   - tel_Telu: Changed: 0 of 50 (0.00%). Dropped: 0 of 50 (0.00%). Changed or dropped: 0 of 50 (0.00%). **PASS**
    - ZWJ/ZWNJ audit: 0 changed documents checked, 0 with a different count. **PASS**
+   - Normal-form audit (NFC kept, no compatibility character lost): 0 changed documents, 0 problems. **PASS**
    - Result: **PASS**
-   - Gold set: 46 Telugu documents (5 from ind-te-sangraha-s, 18 from ind-te-fw2, 23 from ind-te-sangraha-v), each marked clean by two readers who read it in full. Built with gold_from_labels.py and checked against Data A's build_gold.py (the same 46 ids).
+   - Gold set: 50 Telugu documents (5 from ind-te-sangraha-s, 18 from ind-te-fw2, 27 from ind-te-sangraha-v), each marked clean by two readers who read it in full. Built with gold_indic.py (PR #148) from the public sheets of 31 Oct. The earlier 46-document set gave the same result.
    - It is not a rule that does nothing: it drops 20 of the 87 documents labelled D5 and 26 documents in the whole pack.
 5. **Side effects:** It acts on 20 of the 87 documents labelled D5 and on 6 others, so most D5 documents stay. A formal or legal Telugu text that really uses యొక్క often would be dropped by mistake.
 
@@ -165,10 +171,11 @@ Counts are from my 500 labelled rows. Where a harm-test block says Telugu interi
        return re.sub(r"[ \t]*\([ \t,;]*\)", "", text)
    ```
 3. **Action:** fix the text. (My verdicts on these documents: drop 0, fix 30.)
-4. **Harm test:** gold set `gold_tel_Telu.jsonl` (sha256 b75f2c2a8acc), medicine `telugu_rules.py:medicine_g3` (sha256 6beb7304dd6b); rule: changed or dropped at most 1% (DISEASES.md section 4).
-   - tel_Telu: Changed: 0 of 46 (0.00%). Dropped: 0 of 46 (0.00%). Changed or dropped: 0 of 46 (0.00%). **PASS**
+4. **Harm test:** gold set: the Telugu interim gold set, 50 documents (teams/02-data-b/gold/telugu_gold.csv, built 31 Oct 2026); rule `medicine_g3` of this file (the code block in this section), run with harm_test_indic.py (PR #148); a rule passes if it changes or drops at most max(1 document, 1%) of the gold set (TSAI, CAP 30 Oct).
+   - tel_Telu: Changed: 0 of 50 (0.00%). Dropped: 0 of 50 (0.00%). Changed or dropped: 0 of 50 (0.00%). **PASS**
    - ZWJ/ZWNJ audit: 0 changed documents checked, 0 with a different count. **PASS**
+   - Normal-form audit (NFC kept, no compatibility character lost): 0 changed documents, 0 problems. **PASS**
    - Result: **PASS**
-   - Gold set: 46 Telugu documents (5 from ind-te-sangraha-s, 18 from ind-te-fw2, 23 from ind-te-sangraha-v), each marked clean by two readers who read it in full. Built with gold_from_labels.py and checked against Data A's build_gold.py (the same 46 ids).
+   - Gold set: 50 Telugu documents (5 from ind-te-sangraha-s, 18 from ind-te-fw2, 27 from ind-te-sangraha-v), each marked clean by two readers who read it in full. Built with gold_indic.py (PR #148) from the public sheets of 31 Oct. The earlier 46-document set gave the same result.
    - It is not a rule that does nothing: it changes 12 of the 30 documents labelled G3 and 49 documents in the whole pack.
 5. **Side effects:** A bracket pair that holds only commas or semicolons is removed even when it was meant. Unclosed remnants such as `(,` or `(;` are not touched.
