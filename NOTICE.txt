@@ -1,0 +1,8 @@
+Four 500-document sample packs from the ERA V5 lab's week-1 packs, from Sangraha's synthetic (translated) split.
+Source: ai4bharat/sangraha, https://huggingface.co/datasets/ai4bharat/sangraha, by AI4Bharat, licence CC-BY-4.0.
+
+sha256:
+7fd34f97729659a7c0c7f6bed0190e7f4eda29ed8a0f9b9eacbfe4a607a3ff6d  ind-hi-sangraha-s.parquet
+a161966005c037a1bdb70245c2b6135520967c57c5fc618cba5f29d9e248f427  ind-kn-sangraha-s.parquet
+40509e609fb6020649a86baf1b8e849659442ef8e807b02a842ac8f9f757b74d  ind-ta-sangraha-s.parquet
+feeb676e76dee102d132846c1af2a92c3ea4d1018e0fd5239f50fc0da0fb6069  ind-te-sangraha-s.parquet
